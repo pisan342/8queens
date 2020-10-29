@@ -54,7 +54,7 @@ public:
   bool isSafe(int row, int col) const {
     int change[8][2] = {{1, 0}, {-1, 0},  {0, 1},  {0, -1},
                         {1, 1}, {-1, -1}, {1, -1}, {-1, 1}};
-    for (int c = 1; c <= 8; c++) {
+    for (int c = 0; c < 8; c++) {
       int i = row + change[c][0];
       int j = col + change[c][1];
       while (i <= size && i >= 1 && j <= size && j >= 1) {
